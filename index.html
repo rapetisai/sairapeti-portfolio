@@ -1,307 +1,351 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sai Rapeti · Data Analyst / ML</title>
-  <meta name="description" content="Portfolio of Sai Rapeti — Data Analytics Engineering grad focusing on analytics, ML, visualization, and quantitative research." />
-  <meta name="theme-color" content="#0b0e14" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Sai Rapeti — Data Analytics Engineering @ Northeastern. Analytics, ML, dashboards, and decision-ready insights.">
+  <meta name="author" content="Sai Rapeti">
 
-  <!-- Open Graph (update og:url after publish) -->
-  <meta property="og:title" content="Sai Rapeti · Data Analyst / ML">
-  <meta property="og:description" content="Turning messy data into decision-ready insights.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://<your-github-username>.github.io/<repo-name>/">
+  <title>Sai Rapeti</title>
+  <link rel="icon" href="images/crag.png" type="image/png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/unicons.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-  <style>
-    :root {
-      --bg: #0b0e14; --surface: #111522; --text: #f5f7ff; --muted:#b5c0d0; --primary:#7c9cff; --chip:#1a2033; --ring: rgba(124,156,255,.35);
-    }
-    [data-theme="light"] {
-      --bg:#ffffff; --surface:#f5f7fb; --text:#0b1020; --muted:#495066; --primary:#3348ff; --chip:#e9ecf7; --ring: rgba(51,72,255,.25);
-    }
-    * { box-sizing: border-box; }
-    html, body { height:100%; scroll-behavior:smooth; }
-    body {
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 60%, #0e1320 100%); color:var(--text);
-      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-    }
-    a { color: var(--text); text-decoration: none; }
-    .container { width:min(1100px, 92%); margin:0 auto; }
-
-    /* nav */
-    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 75%, transparent); border-bottom:1px solid rgba(255,255,255,.06); z-index:50; }
-    nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
-    .brand { font-weight:800; letter-spacing:.2px; }
-    .navlinks { display:flex; align-items:center; gap:18px; font-weight:600; opacity:.92; }
-    .cta { background: var(--primary); color:#0b0e14; padding:10px 14px; border-radius:12px; font-weight:700; box-shadow:0 0 0 0 var(--ring); transition: box-shadow .2s; }
-    .cta:hover { box-shadow: 0 0 0 6px var(--ring); }
-    .toggle { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.12); padding:6px 10px; border-radius:999px; cursor:pointer; font-weight:600; }
-
-    /* hero */
-    .hero { display:grid; grid-template-columns: 1.25fr 1fr; gap:28px; padding:64px 0 24px; align-items:center; }
-    .eyebrow { color:var(--muted); font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:12px; }
-    h1 { font-size: clamp(34px, 8vw, 56px); line-height:1.05; margin:8px 0 8px; }
-    .typed { display:inline-block; border-bottom:2px solid var(--primary); padding-bottom:2px; }
-    .tagline { font-size:clamp(16px,2.5vw,19px); color:var(--muted); }
-    .chips { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0; }
-    .chip { background: var(--chip); border:1px solid rgba(0,0,0,.06); padding:8px 12px; border-radius:999px; font-weight:600; font-size:13px; }
-    .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
-    .btn { padding:10px 14px; border:1px solid rgba(255,255,255,.12); border-radius:12px; font-weight:600; }
-    .btn:hover { background: rgba(255,255,255,.06); }
-
-    /* sections */
-    section { padding:46px 0; }
-    section h2 { font-size:26px; margin:0 0 18px; }
-
-    /* experience / education */
-    .year { font-weight:800; margin:18px 0 6px; opacity:.9; }
-    .timeline { border-left:2px solid rgba(255,255,255,.08); padding-left:16px; }
-    .item { position:relative; padding:10px 0 10px 2px; }
-    .item::before { content:""; position:absolute; left:-10px; top:20px; width:10px; height:10px; border-radius:50%; background:var(--primary); box-shadow:0 0 0 6px var(--ring); }
-    .role { font-weight:700; }
-    .meta { color:var(--muted); font-weight:600; font-size:13px; margin-top:3px; }
-    .bullets { margin:8px 0 0 0; padding-left:18px; color:#e5e9f5; }
-
-    /* skills grid (icon-style) */
-    .skills { display:grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap:12px; }
-    .skill { background: var(--surface); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:10px 12px; display:flex; align-items:center; gap:10px; font-weight:600; }
-    .badge { font-weight:800; font-size:13px; opacity:.8; }
-
-    /* projects */
-    .cards { display:grid; grid-template-columns: repeat(12, 1fr); gap:16px; }
-    .card { grid-column: span 12; background: var(--surface); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; }
-    @media (min-width: 800px) { .card { grid-column: span 6; } }
-    .card h3 { margin:4px 0 6px; font-size:18px; }
-    .card p { margin:0; color:var(--muted); }
-    .card-actions { margin-top:12px; display:flex; gap:10px; }
-
-    /* footer */
-    footer { padding:60px 0 80px; color:var(--muted); text-align:center; }
-
-    /* mobile */
-    @media (max-width:800px) {
-      .hero { grid-template-columns: 1fr; }
-      .links { flex-wrap: wrap; }
-    }
-  </style>
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header>
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container">
-      <nav aria-label="Primary">
-        <div class="brand">Sai Rapeti</div>
-        <div class="navlinks">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-          <a href="#contact" class="cta">Get in Touch</a>
-          <button id="themeToggle" class="toggle" type="button" aria-pressed="true">Dark mode</button>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Sai Rapeti</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <!-- fixed: About should link to #about -->
+            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <!-- use your local resume file -->
+            <a href="resume.pdf" class="nav-link" target="_blank"><span data-hover="Resume">Resume</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="mailto:rapeti.sa@northeastern.edu" class="nav-link"><span data-hover="Email">Get in
+                Touch</span></a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-lg-auto">
+          <div class="ml-lg-4">
+            <div class="color-mode d-lg-flex justify-content-center align-items-center">
+              <i class="color-mode-icon"></i>
+              Dark mode
+            </div>
+          </div>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <!-- HERO (matches sample: bold intro + rotating roles + social links) -->
-    <section class="hero" id="about" aria-label="About">
-      <div>
-        <div class="eyebrow">Data doesn't lie — it needs a translator.</div>
-        <h1>Hey folks, I'm Sai — <span class="typed" id="typedRole">Data Analyst</span></h1>
-        <p class="tagline">Aspiring data scientist with a strong foundation in analytics, statistical modeling, machine learning, and cloud computing. Passionate about leveraging AI and data-driven insights to solve real-world problems.</p>
+  <!-- ABOUT -->
+  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+      <div class="row">
 
-        <div class="chips" aria-label="Key skills">
-          <span class="chip">Python</span><span class="chip">R</span><span class="chip">SQL</span>
-          <span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Tableau</span>
-          <span class="chip">Power BI</span><span class="chip">AWS · GCP · Azure</span>
-        </div>
+        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+          <div class="about-text">
+            <small class="small-text">Data doesn't lie, but it needs a translator. <span class="mobile-block">That's
+                where I come in!</span></small>
 
-        <div class="links" role="group" aria-label="Primary links">
-          <a class="btn" href="https://www.linkedin.com/in/sai-rapeti19/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/<your-github-username>" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:rapeti.sa@northeastern.edu">Email</a>
-          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </div>
-      </div>
+            <h1 class="animated animated-text">
+              <span class="mr-2">Hey folks, I'm a</span>
+              <div class="animated-info">
+                <span class="animated-item">Data Analyst</span>
+                <span class="animated-item">Data Engineer</span>
+                <span class="animated-item">Data Scientist</span>
+              </div>
+            </h1>
 
-      <!-- Optional avatar: upload avatar.jpg at repo root -->
-      <div>
-        <!-- Replace with your own photo or remove this <img> entirely -->
-        <img src="avatar.jpg" alt="Portrait of Sai Rapeti" style="width:220px; height:220px; border-radius:50%; object-fit:cover; display:block; margin-left:auto;" loading="lazy" decoding="async">
-      </div>
-    </section>
+            <p>Data Analytics Engineering graduate @ Northeastern. I build analytics, ML models, and dashboards across
+              finance, geospatial &amp; urban analytics—turning messy data into crisp, decision-ready insights.</p>
 
-    <!-- EXPERIENCES (grouped by years like sample) -->
-    <section id="experience" aria-label="Experiences">
-      <h2>Experiences</h2>
-
-      <div class="year">2025</div>
-      <div class="timeline">
-        <div class="item">
-          <div class="role">Graduate Quantitative Research Intern · New England Investment Consulting Group LLC</div>
-          <div class="meta">Boston, MA · Jan 2025 – Present</div>
-          <ul class="bullets">
-            <li>Develop algorithmic trading strategies to enhance returns & minimize risks.</li>
-            <li>Train LLMs & curate specialized financial datasets to improve model performance.</li>
-            <li>Collaborate with risk to identify & mitigate financial risks in quant strategies.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="year">2023</div>
-      <div class="timeline">
-        <div class="item">
-          <div class="role">Data Analyst Intern · Code Facts Pvt Ltd</div>
-          <div class="meta">India · Jan 2023 – May 2023</div>
-          <ul class="bullets">
-            <li>Analyzed large datasets with Python to uncover trends & relationships.</li>
-            <li>Built dashboards for communicating insights using Tableau/Power BI.</li>
-            <li>~20% accuracy lift and 30% faster decisions using Python/R/SQL/VBA.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="year">2022</div>
-      <div class="timeline">
-        <div class="item">
-          <div class="role">Data Science Intern · Indo Euro Synchronization (with Hochschule Kempten University of Applied Sciences)</div>
-          <div class="meta">Germany · Mar 2022 – Aug 2022</div>
-          <ul class="bullets">
-            <li>Synthesized complex datasets; revealed key trends using Python & R.</li>
-            <li>Created visualizations with Matplotlib/Seaborn/ggplot2 for data-driven decisions.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATIONS (like sample’s separate section) -->
-    <section id="education" aria-label="Educations">
-      <h2>Educations</h2>
-
-      <div class="year">2025</div>
-      <div class="timeline">
-        <div class="item">
-          <div class="role">Master’s in Data Analytics Engineering</div>
-          <div class="meta">Northeastern University, Boston, MA · GPA: 3.67 · Expected Jun 2025</div>
-          <ul class="bullets">
-            <li>Coursework: NLP, Neural Networks & Deep Learning, Data Mining, Data Management for Analytics, Deterministic OR, Computation & Visualization.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="year">2023</div>
-      <div class="timeline">
-        <div class="item">
-          <div class="role">B.Tech in Computer Science and Engineering</div>
-          <div class="meta">Vellore Institute of Technology, India · May 2023 · GPA: 3.5</div>
-          <ul class="bullets">
-            <li>Coursework: Data Warehousing & Mining, DBMS, Probability & Statistics, Problem Solving using Java.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS (icon-like, matching visual grid from sample) -->
-    <section id="skills" aria-label="Skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill"><span class="badge">Py</span> Python</div>
-        <div class="skill"><span class="badge">R</span> R</div>
-        <div class="skill"><span class="badge">SQL</span> SQL</div>
-        <div class="skill"><span class="badge">TF</span> TensorFlow</div>
-        <div class="skill"><span class="badge">SK</span> Scikit-learn</div>
-        <div class="skill"><span class="badge">TB</span> Tableau</div>
-        <div class="skill"><span class="badge">PBI</span> Power BI</div>
-        <div class="skill"><span class="badge">AWS</span> AWS</div>
-        <div class="skill"><span class="badge">GCP</span> GCP</div>
-        <div class="skill"><span class="badge">AZ</span> Azure</div>
-        <div class="skill"><span class="badge">ETL</span> ETL / Pipelines</div>
-        <div class="skill"><span class="badge">GEO</span> Geospatial Analysis</div>
-      </div>
-    </section>
-
-    <!-- PROJECTS (cards + 'View more on GitHub' like sample) -->
-    <section id="projects" aria-label="Projects">
-      <h2>Projects</h2>
-
-      <p style="margin: 0 0 12px;">
-        <a class="btn" href="https://github.com/<your-github-username>" target="_blank" rel="noopener">View More Projects on GitHub</a>
-      </p>
-
-      <div class="cards">
-        <article class="card">
-          <div class="badge">Deep Learning</div>
-          <h3>Deep Learning Model for Land Use</h3>
-          <p>Satellite imagery classification with CNNs to identify land-use patterns. Python pipelines for preprocessing & training; goal: ~50% reduction in manual classification time.</p>
-          <div class="card-actions">
-            <a class="btn" href="#" aria-disabled="true">Code (GitHub)</a>
-            <a class="btn" href="#" aria-disabled="true">Read more →</a>
+            <div class="custom-btn-group mt-4">
+              <a href="https://www.linkedin.com/in/sai-rapeti19/" class="social-button linkedin" target="_blank">
+                <img src="images/linkedin_logo.png" alt="LinkedIn" width="50" height="50" />
+              </a>
+              <!-- If you have a GitHub username, replace the href with your profile -->
+              <a href="https://github.com/" class="social-button github" target="_blank">
+                <img src="images/github_logo.png" alt="GitHub" width="50" height="50" />
+              </a>
+              <a href="mailto:rapeti.sa@northeastern.edu" class="social-button email">
+                <img src="images/email.jpg" alt="Email" width="50" height="50" />
+              </a>
+              <a href="resume.pdf" class="social-button email" target="_blank">
+                <img src="images/resume.jpg" alt="Resume" width="50" height="50" />
+              </a>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="badge">Clustering · Urban Analytics</div>
-          <h3>Urban Spatial Order: Street Network Clustering</h3>
-          <p>K-means & hierarchical clustering of global street networks; elbow method for k; dendrograms to compare city patterns.</p>
-          <div class="card-actions">
-            <a class="btn" href="#" aria-disabled="true">Code (GitHub)</a>
-            <a class="btn" href="#" aria-disabled="true">Read more →</a>
+        <!-- Keep the picture exactly the same element/path as requested -->
+        <div class="col-lg-4 col-md-8 col-8">
+          <div class="about-image svg">
+            <img src="images/my_pic2.jpg" class="img-fluid" alt="Portrait of Sai Rapeti">
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="badge">Time-series · Health</div>
-          <h3>Accelerometer-Based Alcohol Consumption Detection</h3>
-          <p>Merged accelerometer & TAC signals (>95% integration). Permutation entropy & complexity features; ~30% better detection of heavy-drinking episodes.</p>
-          <div class="card-actions">
-            <a class="btn" href="#" aria-disabled="true">Code (GitHub)</a>
-            <a class="btn" href="#" aria-disabled="true">Read more →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="experience">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6 col-12">
+          <h2 class="mb-4">Experiences</h2>
+
+          <div class="accordion" id="experienceAccordion">
+            <!-- 2025 -->
+            <div class="timeline-wrapper">
+              <div class="timeline-yr"><span>2025</span></div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Quantitative Research Intern</span>
+                  <small> New England Investment Consulting Group LLC · Boston, MA (Jan 2025 – Present)</small>
+                </h3>
+                <p>
+                  • Develop algorithmic trading strategies to enhance returns &amp; minimize risks.<br>
+                  • Train LLMs &amp; curate specialized financial datasets to improve model performance.<br>
+                  • Collaborate with risk teams to identify &amp; mitigate financial risks in quant strategies.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="timeline-wrapper">
+              <div class="timeline-yr"><span>2023</span></div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Data Analyst Intern</span>
+                  <small> Code Facts Pvt Ltd · India (Jan 2023 – May 2023)</small>
+                </h3>
+                <p>
+                  • Analyzed large datasets with Python to uncover trends &amp; relationships.<br>
+                  • Built dashboards &amp; visualizations for clear communication of insights.<br>
+                  • Achieved ~20% accuracy lift and 30% faster decisions using Python/R/SQL/VBA.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="timeline-wrapper">
+              <div class="timeline-yr"><span>2022</span></div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Data Science Intern</span>
+                  <small> Indo Euro Synchronization (with Hochschule Kempten Univ. of Applied Sciences) · Germany (Mar 2022 – Aug 2022)</small>
+                </h3>
+                <p>
+                  • Synthesized complex datasets; revealed key patterns with Python &amp; R.<br>
+                  • Built visualizations using Matplotlib, Seaborn &amp; ggplot2 for data-driven decisions.
+                </p>
+              </div>
+            </div>
+
           </div>
-        </article>
-      </div>
-    </section>
+        </div>
 
-    <!-- CONTACT -->
-    <section id="contact" aria-label="Get in Touch">
-      <h2>Get in Touch</h2>
-      <p class="tagline">Open to data analyst / ML / BI roles and internships. Based in Boston, MA.</p>
-      <div class="links">
-        <a class="btn" href="https://www.linkedin.com/in/sai-rapeti19/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/<your-github-username>" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="mailto:rapeti.sa@northeastern.edu">Email</a>
-      </div>
-    </section>
-  </main>
+        <!-- EDUCATION -->
+        <div class="col-lg-6 col-12">
+          <h2 class="mb-4 mobile-mt-2">Educations</h2>
 
-  <footer>
-    © <span id="year"></span> Sai Rapeti. Built with accessible, fast, static HTML/CSS. Deployed on GitHub Pages.
+          <div class="timeline">
+            <!-- 2025 -->
+            <div class="timeline-wrapper">
+              <div class="timeline-yr"><span>2025</span></div>
+              <div class="timeline-info">
+                <h3><span>Master of Science — Data Analytics Engineering</span></h3>
+                <small>Northeastern University, Boston, MA · GPA: 3.67 · Expected Jun 2025</small>
+                <p><b>Coursework:</b> Data Mining in Engineering, Data Management for Analytics, Computation &amp; Visualization,
+                  Foundations of Data Analytics, Natural Language Processing, Neural Networks &amp; Deep Learning, Deterministic OR.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="timeline-wrapper">
+              <div class="timeline-yr"><span>2023</span></div>
+              <div class="timeline-info">
+                <h3><span>B.Tech — Computer Science &amp; Engineering</span></h3>
+                <small>Vellore Institute of Technology, India · GPA: 3.5</small>
+                <p><b>Coursework:</b> Data Warehousing &amp; Mining, DBMS, Probability &amp; Statistics, Problem Solving using Java.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="col-lg-6 col-12">
+        <h2 class="mb-4">Skills</h2>
+      </div>
+
+      <div class="skills-container">
+        <canvas id="skillsCanvas" width="500" height="500"></canvas>
+      </div>
+
+      <!-- Icons updated to your stack; feel free to add/remove icons you have assets for -->
+      <ul id="iconSkills" style="display:none;">
+        <li><a><img src="images/skills/python.png" alt="Python" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/r.png" alt="R" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/sql.png" alt="SQL" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/java.png" alt="Java" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/tensorflow.svg" alt="TensorFlow" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/keras.png" alt="Keras" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/sklearn.png" alt="Scikit-learn" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/pandas.png" alt="Pandas" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/numpy.png" alt="NumPy" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/tableau.svg" alt="Tableau" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/powerbi.svg" alt="Power BI" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/excel.svg" alt="Excel" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/mongodb.png" alt="MongoDB" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/git.svg" alt="Git" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/aws.svg" alt="AWS" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/gcp.svg" alt="GCP" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/azure.svg" alt="Azure" width="50" height="50"></a></li>
+        <!-- Optional extras: MATLAB, AMPL, Flourish if you have icons -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="projects">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Projects</h2>
+        <!-- Update this to your GitHub profile if you’d like -->
+        <a href="https://github.com/" class="btn btn-primary" target="_blank">View More Projects on GitHub</a>
+      </div>
+
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100">
+            <img class="card-img-top" src="images/Project/landuse.png" alt="Land Use Deep Learning (placeholder)">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Deep Learning Model for Land Use</h5>
+              <div class="tags mb-2">
+                <span class="badge badge-primary">Python</span>
+                <span class="badge badge-primary">CNN</span>
+                <span class="badge badge-primary">TensorFlow</span>
+              </div>
+              <p class="card-text">Satellite imagery classification with CNNs to identify land-use patterns; Python
+                pipelines for preprocessing &amp; training; aimed to cut manual classification time by ~50%.</p>
+              <a href="#" class="btn btn-link mt-auto" target="_blank" aria-disabled="true">Code (GitHub) →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100">
+            <img class="card-img-top" src="images/Project/clustering.png" alt="Urban Spatial Order (placeholder)">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Urban Spatial Order: Street Network Clustering</h5>
+              <div class="tags mb-2">
+                <span class="badge badge-primary">Python</span>
+                <span class="badge badge-primary">K-means</span>
+                <span class="badge badge-primary">Hierarchical</span>
+              </div>
+              <p class="card-text">K-means &amp; hierarchical clustering of global urban street networks; elbow method
+                for k; dendrograms to compare city patterns across regions.</p>
+              <a href="#" class="btn btn-link mt-auto" target="_blank" aria-disabled="true">Code (GitHub) →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100">
+            <img class="card-img-top" src="images/Project/alcohol.png" alt="Accelerometer-based Alcohol Detection (placeholder)">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Accelerometer-Based Alcohol Consumption Detection</h5>
+              <div class="tags mb-2">
+                <span class="badge badge-primary">Time-series</span>
+                <span class="badge badge-primary">Permutation Entropy</span>
+                <span class="badge badge-primary">ML</span>
+              </div>
+              <p class="card-text">Merged accelerometer &amp; TAC signals (&gt;95% integration); permutation entropy &amp;
+                complexity features; ~30% improvement in heavy-drinking episode detection.</p>
+              <a href="#" class="btn btn-link mt-auto" target="_blank" aria-disabled="true">Code (GitHub) →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer py-5">
+    <div class="container text-center">
+      <h3>Get in Touch</h3>
+      <div class="custom-btn-group mt-4 d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/sai-rapeti19/" class="social-button linkedin" target="_blank">
+          <img src="images/linkedin_logo.png" alt="LinkedIn" width="50" height="50" />
+        </a>
+        <a href="https://github.com/" class="social-button github" target="_blank">
+          <img src="images/github_logo.png" alt="GitHub" width="50" height="50" />
+        </a>
+        <a href="mailto:rapeti.sa@northeastern.edu" class="social-button email">
+          <img src="images/email.jpg" alt="Email" width="50" height="50" />
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row"><div class="col-lg-12 col-12"></div></div>
+    </div>
   </footer>
 
-  <script>
-    // current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- JS -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
 
-    // role rotator (matches sample’s feel with rotating roles)
-    const roles = ["Data Analyst", "Data Engineer", "Data Scientist"];
-    let r = 0;
-    setInterval(() => {
-      r = (r + 1) % roles.length;
-      document.getElementById("typedRole").textContent = roles[r];
-    }, 1800);
+  <!-- Skills TagCanvas (kept) -->
+  <script src="js/tagcanvas.min.js"></script>
+  <script src="js/skillcloud.js"></script>
 
-    // dark mode toggle
-    const btn = document.getElementById('themeToggle');
-    btn.addEventListener('click', () => {
-      const root = document.documentElement;
-      const isDark = root.getAttribute('data-theme') !== 'light';
-      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      btn.textContent = isDark ? 'Light mode' : 'Dark mode';
-    });
-  </script>
+  <!-- Optional: chatbot widget script (kept disabled in HTML) -->
+  <script src="js/chatbot-widget.js"></script>
 </body>
 </html>
