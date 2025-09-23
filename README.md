@@ -8,15 +8,6 @@ A fast, responsive, single-page portfolio to showcase my projects, experience, a
 - HTML, CSS (Bootstrap), JS
 - Unicons, Owl Carousel (template), TagCanvas (skills cloud)
 
-## Structure
-/ (repo root)
-├─ index.html
-├─ resume.pdf
-├─ css/
-├─ js/
-├─ images/
-└─ font/
-
 > **Note:** GitHub Pages is case-sensitive. Use lowercase folders (`css/`, `js/`, `images/`, `font/`) and make sure paths in `index.html` match exactly.
 
 ## Update Resume
