@@ -15,6 +15,28 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Custom Language Selector Style to match theme */
+    .lang-select-container {
+      margin-left: 20px;
+    }
+    #language-selector {
+      background: transparent;
+      color: #5b5b5b; /* Matches your theme text color */
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 5px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+    /* Dark mode adjustments for selector */
+    body.dark-mode #language-selector {
+      color: #f0f0f0;
+      border-color: #444;
+    }
+  </style>
 </head>
 
 <body>
@@ -32,16 +54,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+            <a href="#about" class="nav-link"><span data-hover="About" data-i18n="nav_about">About</span></a>
           </li>
           <li class="nav-item">
-            <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+            <a href="#projects" class="nav-link"><span data-hover="Projects" data-i18n="nav_projects">Projects</span></a>
           </li>
           <li class="nav-item">
-            <a href="resume.pdf" class="nav-link" target="_blank"><span data-hover="Resume">Resume</span></a>
+            <a href="resume.pdf" class="nav-link" target="_blank"><span data-hover="Resume" data-i18n="nav_resume">Resume</span></a>
           </li>
           <li class="nav-item">
-            <a href="mailto:rapeti.sa@northeastern.edu" class="nav-link"><span data-hover="Email">Get in Touch</span></a>
+            <a href="mailto:rapeti.sa@northeastern.edu" class="nav-link"><span data-hover="Email" data-i18n="nav_contact">Get in Touch</span></a>
           </li>
         </ul>
 
@@ -49,8 +71,16 @@
           <div class="ml-lg-4">
             <div class="color-mode d-lg-flex justify-content-center align-items-center">
               <i class="color-mode-icon"></i>
-              Dark mode
+              <span data-i18n="dark_mode">Dark mode</span>
             </div>
+          </div>
+          <div class="lang-select-container d-flex align-items-center">
+            <select id="language-selector" onchange="changeLanguage(this.value)">
+              <option value="en">English</option>
+              <option value="te">Telugu (తెలుగు)</option>
+              <option value="hi">Hindi (हिंदी)</option>
+              <option value="es">Spanish (Español)</option>
+            </select>
           </div>
         </ul>
       </div>
@@ -62,16 +92,22 @@
       <div class="row">
         <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
           <div class="about-text">
-            <small class="small-text">Data doesn't lie, but it needs a translator. <span class="mobile-block">That's where I come in!</span></small>
+            <small class="small-text">
+              <span data-i18n="hero_small_1">Data doesn't lie, but it needs a translator.</span> 
+              <span class="mobile-block" data-i18n="hero_small_2">That's where I come in!</span>
+            </small>
+
             <h1 class="animated animated-text">
-              <span class="mr-2">Hey folks, I'm a</span>
+              <span class="mr-2" data-i18n="hero_intro">Hey folks, I'm a</span>
               <div class="animated-info">
                 <span class="animated-item">Data Analyst</span>
                 <span class="animated-item">Data Engineer</span>
                 <span class="animated-item">Data Scientist</span>
               </div>
             </h1>
-            <p>Data Analytics Engineering graduate @ Northeastern. I build analytics, ML models, and dashboards across finance, geospatial &amp; urban analytics — turning messy data into crisp, decision-ready insights.</p>
+
+            <p data-i18n="hero_desc">Data Analytics Engineering graduate @ Northeastern. I build analytics, ML models, and dashboards across finance, geospatial &amp; urban analytics — turning messy data into crisp, decision-ready insights.</p>
+
             <div class="custom-btn-group mt-4">
               <a href="https://www.linkedin.com/in/sai-rapeti19/" class="social-button linkedin" target="_blank">
                 <img src="images/linkedin_logo.png" alt="LinkedIn" width="50" height="50" />
@@ -101,61 +137,61 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-12">
-          <h2 class="mb-4">Experiences</h2>
+          <h2 class="mb-4" data-i18n="section_experience">Experiences</h2>
           <div class="accordion" id="experienceAccordion">
             
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2025</span></div>
               <div class="timeline-info">
-                <h3><span>Graduate Teaching Assisant </span><small> Northeastern University · Boston, MA (Jun 2025 – Present)</small></h3>
-                <p>Facilitated workshops for 200+ undergraduates on Python, AI, and deep learning, designing hands-on assignments with TensorFlow and PyTorch to strengthen applied ML skills.</p>
+                <h3><span data-i18n="exp_1_role">Graduate Teaching Assistant</span><small> Northeastern University · Boston, MA (Jun 2025 – Present)</small></h3>
+                <p data-i18n="exp_1_desc">Facilitated workshops for 200+ undergraduates on Python, AI, and deep learning, designing hands-on assignments with TensorFlow and PyTorch to strengthen applied ML skills.</p>
               </div>
             </div>
 
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2025</span></div>
               <div class="timeline-info">
-                <h3><span>Quantitative Researcher</span><small> New England Investment Consulting Group LLC · Boston, MA (Jan 2025 – Jun 2025)</small></h3>
-                <p>Developed and implemented algorithmic trading strategies to enhance returns and minimize market risks; trained LLMs and curated specialized financial datasets to improve model performance; collaborated with risk management to identify and mitigate risks in quantitative strategies.</p>
+                <h3><span data-i18n="exp_2_role">Quantitative Researcher</span><small> New England Investment Consulting Group LLC · Boston, MA (Jan 2025 – Jun 2025)</small></h3>
+                <p data-i18n="exp_2_desc">Developed and implemented algorithmic trading strategies to enhance returns and minimize market risks; trained LLMs and curated specialized financial datasets.</p>
               </div>
             </div>
             
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2022–2023</span></div>
               <div class="timeline-info">
-                <h3><span>Junior Data Analyst</span><small> Code Facts Pvt Ltd · India (Sep 2022 – Aug 2023)</small></h3>
-                <p>Analyzed large datasets in Python to uncover trends; built dashboards &amp; visualizations for communication; used Python/R/SQL/VBA for advanced analysis and modeling, delivering ~20% accuracy improvement and ~30% faster decisions.</p>
+                <h3><span data-i18n="exp_3_role">Junior Data Analyst</span><small> Code Facts Pvt Ltd · India (Sep 2022 – Aug 2023)</small></h3>
+                <p data-i18n="exp_3_desc">Analyzed large datasets in Python to uncover trends; built dashboards &amp; visualizations for communication; used Python/R/SQL/VBA for advanced analysis.</p>
               </div>
             </div>
 
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2022</span></div>
               <div class="timeline-info">
-                <h3><span>Data Science Assistant</span><small> Hochschule Kempten University of Applied Sciences · Germany (Jan 2021 – Aug 2022)</small></h3>
-                <p>Synthesized complex datasets and revealed key patterns using Python &amp; R; produced visualizations with Matplotlib, Seaborn &amp; ggplot2 to drive data-informed decisions.</p>
+                <h3><span data-i18n="exp_4_role">Data Science Assistant</span><small> Hochschule Kempten University · Germany (Jan 2021 – Aug 2022)</small></h3>
+                <p data-i18n="exp_4_desc">Synthesized complex datasets and revealed key patterns using Python &amp; R; produced visualizations with Matplotlib, Seaborn &amp; ggplot2.</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="col-lg-6 col-12">
-          <h2 class="mb-4 mobile-mt-2">Educations</h2>
+          <h2 class="mb-4 mobile-mt-2" data-i18n="section_education">Education</h2>
           <div class="timeline">
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2025</span></div>
               <div class="timeline-info">
-                <h3><span>Master of Science in Data Analytics Engineering</span></h3>
+                <h3><span data-i18n="edu_1_degree">Master of Science in Data Analytics Engineering</span></h3>
                 <small>Northeastern University, Boston, MA · GPA: 3.67 · (Sep 2023 - Dec 2025)</small>
-                <p><b>Coursework:</b> Data Mining in Engineering, Data Management for Analytics, Computation &amp; Visualization, Foundations of Data Analytics, Story Telling with Data, Natural Language Processing, Neural Networks &amp; Deep Learning, Operations Research.</p>
+                <p><b>Coursework:</b> Data Mining in Engineering, Data Management for Analytics, Computation &amp; Visualization, Foundations of Data Analytics, NLP, Deep Learning.</p>
               </div>
             </div>
 
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2023</span></div>
               <div class="timeline-info">
-                <h3><span>B.Tech in Computer Science &amp; Engineering</span></h3>
+                <h3><span data-i18n="edu_2_degree">B.Tech in Computer Science &amp; Engineering</span></h3>
                 <small>Vellore Institute of Technology, India · GPA: 3.5 · (Jul 2019 - May 2023)</small>
-                <p><b>Coursework:</b> Data Warehousing &amp; Data Mining, Database Management Systems, Probability &amp; Statistics, Problem Solving using Java, Introduction to R, Foundations of Artificial Intelligence, Data Structures and Algorithms.</p>
+                <p><b>Coursework:</b> Data Warehousing &amp; Mining, DBMS, Probability &amp; Statistics, Java, R, AI Foundations.</p>
               </div>
             </div>
           </div>
@@ -167,7 +203,7 @@
   <section class="resume py-5 d-lg-flex justify-content-center align-items-center">
     <div class="container">
       <div class="col-lg-6 col-12">
-        <h2 class="mb-4">Skills</h2>
+        <h2 class="mb-4" data-i18n="section_skills">Skills</h2>
       </div>
       <div class="skills-container">
         <canvas id="skillsCanvas" width="500" height="500"></canvas>
@@ -181,7 +217,6 @@
         <li><a><img src="images/skills/visual-studio.svg" alt="Visual-Studio" width="50" height="50"></a></li>
         <li><a><img src="images/skills/mlFlow.png" alt="MLFlow" width="50" height="50"></a></li>
         <li><a><img src="images/skills/powerbi.svg" alt="Power BI" width="50" height="50"></a></li>
-        <li><a><img src="images/skills/alteryx.png" alt="Alteryx" width="50" height="50"></a></li>
         <li><a><img src="images/skills/postgresql.svg" alt="PostgreSQL" width="50" height="50"></a></li>
         <li><a><img src="images/skills/mongodb.png" alt="MongoDB" width="50" height="50"></a></li>
         <li><a><img src="images/skills/aws.svg" alt="AWS" width="50" height="50"></a></li>
@@ -195,6 +230,7 @@
         <li><a><img src="images/skills/gcp.svg" alt="GCP" width="50" height="50"></a></li>
         <li><a><img src="images/skills/github.svg" alt="Git" width="50" height="50"></a></li>
         <li><a><img src="images/skills/excel.svg" alt="Excel" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/alteryx.png" alt="Alteryx" width="50" height="50"></a></li>
       </ul>
     </div>
   </section>
@@ -202,8 +238,8 @@
   <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="projects">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Projects</h2>
-        <a href="https://github.com/rapetisai?tab=repositories" class="btn btn-primary" target="_blank">View More Projects on GitHub</a>
+        <h2 data-i18n="section_projects">Projects</h2>
+        <a href="https://github.com/rapetisai?tab=repositories" class="btn btn-primary" target="_blank" data-i18n="view_github">View More Projects on GitHub</a>
       </div>
 
       <div class="row">
@@ -213,14 +249,14 @@
             <div class="card project-card">
               <img class="card-img-top" src="images/Project/spy-lstm.jpg" alt="SPY price prediction chart" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">Forecasting SPY with LSTMs</h5>
+                <h5 class="card-title" data-i18n="proj_1_title">Forecasting SPY with LSTMs</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">Python</span>
                   <span class="badge badge-primary">LSTM</span>
                   <span class="badge badge-primary">Time Series</span>
                 </div>
-                <p class="card-text">Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_1_desc">Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
@@ -231,14 +267,14 @@
             <div class="card project-card">
               <img class="card-img-top" src="images/Project/eurosat.jpg" alt="Satellite land use classification" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">Deep Learning Model for Land Use (EuroSAT)</h5>
+                <h5 class="card-title" data-i18n="proj_2_title">Deep Learning Model for Land Use (EuroSAT)</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">Python</span>
                   <span class="badge badge-primary">CNN</span>
                   <span class="badge badge-primary">Deep Learning</span>
                 </div>
-                <p class="card-text">Trained and tuned CNNs on EuroSAT satellite imagery; reported accuracy and per-class metrics with visuals.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_2_desc">Trained and tuned CNNs on EuroSAT satellite imagery; reported accuracy and per-class metrics with visuals.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
@@ -249,14 +285,14 @@
             <div class="card project-card">
               <img class="card-img-top" src="images/Project/urban-network.jpg" alt="Urban street network map" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">Urban Spatial Order: Street Network Analysis</h5>
+                <h5 class="card-title" data-i18n="proj_3_title">Urban Spatial Order: Street Network Analysis</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">Python</span>
                   <span class="badge badge-primary">Network Analysis</span>
                   <span class="badge badge-primary">Geospatial</span>
                 </div>
-                <p class="card-text">Analyzed street-network structure and spatial order with graph metrics to compare connectivity across cities.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_3_desc">Analyzed street-network structure and spatial order with graph metrics to compare connectivity across cities.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
@@ -267,14 +303,14 @@
             <div class="card project-card">
               <img class="card-img-top" src="images/Project/accelerometer.jpg" alt="Signal processing graph" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">Accelerometer-Based Alcohol Consumption Detection</h5>
+                <h5 class="card-title" data-i18n="proj_4_title">Accelerometer-Based Alcohol Consumption Detection</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">Python</span>
                   <span class="badge badge-primary">Signal Processing</span>
                   <span class="badge badge-primary">Classification</span>
                 </div>
-                <p class="card-text">Engineered motion features from wearable data and trained classifiers to detect consumption events.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_4_desc">Engineered motion features from wearable data and trained classifiers to detect consumption events.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
@@ -285,14 +321,14 @@
             <div class="card project-card">
               <img class="card-img-top" src="images/Project/nlp-summarizer.jpg" alt="Text summarization example" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">Research Paper Summarization</h5>
+                <h5 class="card-title" data-i18n="proj_5_title">Research Paper Summarization</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">NLP</span>
                   <span class="badge badge-primary">Transformers</span>
                   <span class="badge badge-primary">Summarization</span>
                 </div>
-                <p class="card-text">Compared transformer architectures (e.g., BERT/T5/PEGASUS) to produce concise abstracts; benchmarked with ROUGE-style scores.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_5_desc">Compared transformer architectures (e.g., BERT/T5/PEGASUS) to produce concise abstracts; benchmarked with ROUGE-style scores.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
@@ -302,7 +338,7 @@
           <div class="card project-card">
             <img class="card-img-top" src="images/Project/crypto-dashboard.jpg" alt="Tableau Crypto Dashboard" width="1200" height="675" loading="lazy">
             <div class="card-body">
-              <h5 class="card-title">Cryptocurrency Market Dynamics — Tableau</h5>
+              <h5 class="card-title" data-i18n="proj_6_title">Cryptocurrency Market Dynamics — Tableau</h5>
               <div class="tags mb-2">
                 <span class="badge badge-primary">Tableau</span>
                 <span class="badge badge-primary">SQL</span>
@@ -310,41 +346,43 @@
                 <span class="badge badge-primary">Volatility</span>
                 <span class="badge badge-primary">Data Storytelling</span>
               </div>
-              <p class="card-text">Interactive dashboard exploring price/volume cycles and volatility regimes across major coins, with filters, annotated timelines, and investor-ready insights.</p>
-              <a href="#" class="btn btn-link" target="_blank">View dashboard →</a>
+              <p class="card-text" data-i18n="proj_6_desc">Interactive dashboard exploring price/volume cycles and volatility regimes across major coins, with filters, annotated timelines, and investor-ready insights.</p>
+              <a href="#" class="btn btn-link" target="_blank" data-i18n="view_dashboard">View dashboard →</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <a href="#" class="card-link" target="_blank"> <div class="card project-card">
+          <a href="#" class="card-link" target="_blank">
+            <div class="card project-card">
               <img class="card-img-top" src="images/Project/university-chatbot.jpg" alt="University AI Chatbot Interface" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">University AI Support Bot</h5>
+                <h5 class="card-title" data-i18n="proj_7_title">University AI Support Bot</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">LLM</span>
                   <span class="badge badge-primary">RAG</span>
                   <span class="badge badge-primary">Multi-Agent</span>
                 </div>
-                <p class="card-text">Developed an intelligent chatbot for Northeastern University to answer queries on curriculum, building locations, and schedules using multi-agent workflows.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_7_desc">Developed an intelligent chatbot for Northeastern University to answer queries on curriculum, building locations, and schedules using multi-agent workflows.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
         </div>
 
         <div class="col-md-4 mb-4">
-          <a href="#" class="card-link" target="_blank"> <div class="card project-card">
+          <a href="#" class="card-link" target="_blank">
+            <div class="card project-card">
               <img class="card-img-top" src="images/Project/boston-sports.jpg" alt="Boston Sports Power BI Dashboard" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title">Boston Sports Performance & ROI</h5>
+                <h5 class="card-title" data-i18n="proj_8_title">Boston Sports Performance & ROI</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">Power BI</span>
                   <span class="badge badge-primary">Financial Analysis</span>
                   <span class="badge badge-primary">Sports Analytics</span>
                 </div>
-                <p class="card-text">Interactive dashboard analyzing win rates, playoff conversions, and "Cost Per Win" ROI for the Celtics, Red Sox, and Patriots over the last decade.</p>
-                <span class="btn btn-link">Read more →</span>
+                <p class="card-text" data-i18n="proj_8_desc">Interactive dashboard analyzing win rates, playoff conversions, and "Cost Per Win" ROI for the Celtics, Red Sox, and Patriots over the last decade.</p>
+                <span class="btn btn-link" data-i18n="read_more">Read more →</span>
               </div>
             </div>
           </a>
@@ -356,7 +394,7 @@
 
   <footer class="footer py-5">
     <div class="container text-center">
-      <h3>Get in Touch</h3>
+      <h3 data-i18n="footer_contact">Get in Touch</h3>
       <div class="custom-btn-group mt-4 d-flex justify-content-center">
         <a href="https://www.linkedin.com/in/sai-rapeti19/" class="social-button linkedin" target="_blank">
           <img src="images/linkedin_logo.png" alt="LinkedIn" width="50" height="50" />
@@ -385,5 +423,166 @@
   <script src="js/tagcanvas.min.js"></script>
   <script src="js/skillcloud.js"></script>
   <script src="js/chatbot-widget.js"></script>
+
+  <script>
+    const translations = {
+      en: {
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_resume: "Resume",
+        nav_contact: "Get in Touch",
+        dark_mode: "Dark mode",
+        
+        hero_small_1: "Data doesn't lie, but it needs a translator.",
+        hero_small_2: "That's where I come in!",
+        hero_intro: "Hey folks, I'm a",
+        hero_desc: "Data Analytics Engineering graduate @ Northeastern. I build analytics, ML models, and dashboards across finance, geospatial & urban analytics — turning messy data into crisp, decision-ready insights.",
+        
+        section_experience: "Experiences",
+        exp_1_role: "Graduate Teaching Assistant",
+        exp_2_role: "Quantitative Researcher",
+        exp_3_role: "Junior Data Analyst",
+        exp_4_role: "Data Science Assistant",
+        
+        section_education: "Education",
+        edu_1_degree: "Master of Science in Data Analytics Engineering",
+        edu_2_degree: "B.Tech in Computer Science & Engineering",
+        
+        section_skills: "Skills",
+        section_projects: "Projects",
+        view_github: "View More Projects on GitHub",
+        
+        // Projects - English (Default)
+        proj_1_title: "Forecasting SPY with LSTMs",
+        proj_1_desc: "Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.",
+        proj_2_title: "Deep Learning Model for Land Use (EuroSAT)",
+        proj_2_desc: "Trained and tuned CNNs on EuroSAT satellite imagery; reported accuracy and per-class metrics with visuals.",
+        proj_3_title: "Urban Spatial Order: Street Network Analysis",
+        proj_3_desc: "Analyzed street-network structure and spatial order with graph metrics to compare connectivity across cities.",
+        proj_4_title: "Accelerometer-Based Alcohol Consumption Detection",
+        proj_4_desc: "Engineered motion features from wearable data and trained classifiers to detect consumption events.",
+        proj_5_title: "Research Paper Summarization",
+        proj_5_desc: "Compared transformer architectures (e.g., BERT/T5/PEGASUS) to produce concise abstracts; benchmarked with ROUGE-style scores.",
+        proj_6_title: "Cryptocurrency Market Dynamics",
+        proj_6_desc: "Interactive dashboard exploring price/volume cycles and volatility regimes across major coins, with filters, annotated timelines, and investor-ready insights.",
+        proj_7_title: "University AI Support Bot",
+        proj_7_desc: "Developed an intelligent chatbot for Northeastern University to answer queries on curriculum, building locations, and schedules using multi-agent workflows.",
+        proj_8_title: "Boston Sports Performance & ROI",
+        proj_8_desc: "Interactive dashboard analyzing win rates, playoff conversions, and 'Cost Per Win' ROI for the Celtics, Red Sox, and Patriots over the last decade.",
+        
+        read_more: "Read more →",
+        view_dashboard: "View dashboard →",
+        footer_contact: "Get in Touch"
+      },
+      te: {
+        nav_about: "నా గురించి",
+        nav_projects: "ప్రాజెక్టులు",
+        nav_resume: "రె్యూమ్",
+        nav_contact: "సంప్రదించండి",
+        dark_mode: "డార్క్ మోడ్",
+        
+        hero_small_1: "డేటా అబద్ధం చెప్పదు, కానీ దానికి అనువాదకుడు కావాలి.",
+        hero_small_2: "అక్కడే నేను వస్తాను!",
+        hero_intro: "హలో, నేను ఒక",
+        hero_desc: "నార్త్‌ఈస్ట్రన్ యూనివర్శిటీలో డేటా అనలిటిక్స్ గ్రాడ్యుయేట్. నేను ఫైనాన్స్, జియోస్పేషియల్ మరియు అర్బన్ అనలిటిక్స్‌లో మెషిన్ లెర్నింగ్ మోడల్స్ మరియు డాష్‌బోర్డ్‌లను రూపొందిస్తాను.",
+        
+        section_experience: "అనుభవం",
+        exp_1_role: "గ్రాడ్యుయేట్ టీచింగ్ అసిస్టెంట్",
+        exp_2_role: "క్వాంటిటేటివ్ రీసెర్చర్",
+        exp_3_role: "జూనియర్ డేటా అనలిస్ట్",
+        exp_4_role: "డేటా సైన్స్ అసిస్టెంట్",
+        
+        section_education: "విద్య",
+        edu_1_degree: "మాస్టర్ ఆఫ్ సైన్స్ ఇన్ డేటా అనలిటిక్స్",
+        edu_2_degree: "బి.టెక్ - కంప్యూటర్ సైన్స్",
+        
+        section_skills: "నైపుణ్యాలు",
+        section_projects: "ప్రాజెక్టులు",
+        view_github: "GitHubలో మరిన్ని చూడండి",
+
+        // Add Telugu translations for projects here if needed (defaulting to English for safety)
+        proj_1_title: "Forecasting SPY with LSTMs",
+        proj_1_desc: "Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.",
+        
+        read_more: "మరింత చదవండి →",
+        view_dashboard: "డాష్‌బోర్డ్ చూడండి →",
+        footer_contact: "సంప్రదించండి"
+      },
+      hi: {
+        nav_about: "मेरे बारे में",
+        nav_projects: "प्रोजेक्ट्स",
+        nav_resume: "रिज़्यूम",
+        nav_contact: "संपर्क करें",
+        dark_mode: "डार्क मोड",
+        
+        hero_small_1: "डेटा झूठ नहीं बोलता, लेकिन उसे अनुवादक की जरूरत होती है।",
+        hero_small_2: "वही काम मैं करता हूँ!",
+        hero_intro: "नमस्ते दोस्तों, मैं हूँ",
+        hero_desc: "नॉर्थईस्टर्न यूनिवर्सिटी में डेटा एनालिटिक्स इंजीनियरिंग ग्रेजुएट। मैं वित्त और शहरी विश्लेषण के लिए एमएल मॉडल और डैशबोर्ड बनाता हूं।",
+        
+        section_experience: "अनुभव",
+        exp_1_role: "ग्रेजुएट टीचिंग असिस्टेंट",
+        exp_2_role: "क्वांटिटेटिव रिसर्चर",
+        exp_3_role: "जूनियर डेटा एनालिस्ट",
+        exp_4_role: "डेटा साइंस असिस्टेंट",
+        
+        section_education: "शिक्षा",
+        edu_1_degree: "डेटा एनालिटिक्स में मास्टर ऑफ साइंस",
+        edu_2_degree: "कम्प्यूटर साइंस में बी.टेक",
+        
+        section_skills: "कौशल (Skills)",
+        section_projects: "प्रोजेक्ट्स",
+        view_github: "GitHub पर और देखें",
+        
+        read_more: "और पढ़ें →",
+        view_dashboard: "डैशबोर्ड देखें →",
+        footer_contact: "संपर्क करें"
+      },
+      es: {
+        nav_about: "Sobre mí",
+        nav_projects: "Proyectos",
+        nav_resume: "Currículum",
+        nav_contact: "Contacto",
+        dark_mode: "Modo oscuro",
+        
+        hero_small_1: "Los datos no mienten, pero necesitan un traductor.",
+        hero_small_2: "¡Ahí es donde entro yo!",
+        hero_intro: "Hola a todos, soy",
+        hero_desc: "Graduado en Ingeniería de Análisis de Datos en Northeastern. Creo modelos de ML y tableros en finanzas y análisis geoespacial.",
+        
+        section_experience: "Experiencia",
+        exp_1_role: "Asistente de Docencia",
+        exp_2_role: "Investigador Cuantitativo",
+        exp_3_role: "Analista de Datos Junior",
+        exp_4_role: "Asistente de Ciencia de Datos",
+        
+        section_education: "Educación",
+        edu_1_degree: "Maestría en Análisis de Datos",
+        edu_2_degree: "Ingeniería en Ciencias de la Computación",
+        
+        section_skills: "Habilidades",
+        section_projects: "Proyectos",
+        view_github: "Ver más en GitHub",
+        
+        read_more: "Leer más →",
+        view_dashboard: "Ver tablero →",
+        footer_contact: "Ponte en contacto"
+      }
+    };
+
+    function changeLanguage(lang) {
+      // 1. Update simple text elements
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        // If translation exists in the selected language, use it. Otherwise fallback to English.
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        } else if (translations['en'][key]) {
+          el.textContent = translations['en'][key];
+        }
+      });
+    }
+  </script>
 </body>
 </html>
