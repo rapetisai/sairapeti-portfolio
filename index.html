@@ -10,17 +10,14 @@
   <title>Sai Rapeti</title>
   <link rel="icon" href="images/crag.png" type="image/png">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/unicons.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <!-- MAIN STYLE -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- MENU -->
   <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container">
       <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Sai Rapeti </a>
@@ -35,14 +32,12 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <!-- Link to About section (hero) -->
             <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
           </li>
           <li class="nav-item">
             <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
           </li>
           <li class="nav-item">
-            <!-- Local PDF in repo root -->
             <a href="resume.pdf" class="nav-link" target="_blank"><span data-hover="Resume">Resume</span></a>
           </li>
           <li class="nav-item">
@@ -63,7 +58,6 @@
     </div>
   </nav>
 
-  <!-- ABOUT -->
   <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
     <div class="container">
       <div class="row">
@@ -102,7 +96,6 @@
           </div>
         </div>
 
-        <!-- YOUR hero image filename -->
         <div class="col-lg-4 col-md-8 col-8">
           <div class="about-image svg">
             <img src="images/mypic.jpg" class="img-fluid" alt="Portrait of Sai Rapeti">
@@ -113,18 +106,16 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="experience">
     <div class="container">
       <div class="row">
 
-        <!-- Experience -->
         <div class="col-lg-6 col-12">
           <h2 class="mb-4">Experiences</h2>
 
           <div class="accordion" id="experienceAccordion">
 
-                        <div class="timeline-wrapper">
+            <div class="timeline-wrapper">
               <div class="timeline-yr">
                 <span>2025</span>
               </div>
@@ -179,7 +170,6 @@
           </div>
         </div>
 
-        <!-- Education -->
         <div class="col-lg-6 col-12">
           <h2 class="mb-4 mobile-mt-2">Educations</h2>
 
@@ -212,7 +202,6 @@
     </div>
   </section>
 
-  <!-- Skills (icon cloud) -->
   <section class="resume py-5 d-lg-flex justify-content-center align-items-center">
     <div class="container">
       <div class="col-lg-6 col-12">
@@ -222,7 +211,6 @@
         <canvas id="skillsCanvas" width="500" height="500"></canvas>
       </div>
 
-      <!-- TagCanvas reads these icons to render the rotating cloud -->
       <ul id="iconSkills" style="display:none;">
         <li><a><img src="images/skills/python.png" alt="Python" width="50" height="50"></a></li>
         <li><a><img src="images/skills/sql.png" alt="SQL" width="50" height="50"></a></li>
@@ -231,6 +219,7 @@
         <li><a><img src="images/skills/office.png" alt="Office" width="50" height="50"></a></li>
         <li><a><img src="images/skills/visual-studio.svg" alt="Visual-Studio" width="50" height="50"></a></li>
         <li><a><img src="images/skills/mlFlow.png" alt="MLFlow" width="50" height="50"></a></li>
+        <li><a><img src="images/skills/alteryx.png" alt="Alteryx" width="50" height="50"></a></li>
         <li><a><img src="images/skills/powerbi.svg" alt="Power BI" width="50" height="50"></a></li>
         <li><a><img src="images/skills/postgresql.svg" alt="PostgreSQL" width="50" height="50"></a></li>
         <li><a><img src="images/skills/mongodb.png" alt="MongoDB" width="50" height="50"></a></li>
@@ -249,148 +238,171 @@
     </div>
   </section>
 
-<!-- Projects -->
-<section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="projects">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2>Projects</h2>
-      <a href="https://github.com/rapetisai?tab=repositories" class="btn btn-primary" target="_blank">View More Projects on GitHub</a>
-    </div>
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="projects">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Projects</h2>
+        <a href="https://github.com/rapetisai?tab=repositories" class="btn btn-primary" target="_blank">View More Projects on GitHub</a>
+      </div>
 
-    <div class="row">
+      <div class="row">
 
-      <!-- SPY LSTM -->
-      <div class="col-md-4 mb-4">
-        <a href="https://github.com/rapetisai/Forecasting-SPYwithLSTM" class="card-link" target="_blank">
+        <div class="col-md-4 mb-4">
+          <a href="https://github.com/rapetisai/Forecasting-SPYwithLSTM" class="card-link" target="_blank">
+            <div class="card project-card">
+              <img class="card-img-top" src="images/projects/spy-lstm.webp" alt="SPY price prediction vs. actuals time series" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Forecasting SPY with LSTMs</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">Python</span>
+                  <span class="badge badge-primary">LSTM</span>
+                  <span class="badge badge-primary">Time Series</span>
+                </div>
+                <p class="card-text">Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="https://github.com/rapetisai/Classification_EuroSAT" class="card-link" target="_blank">
+            <div class="card project-card">
+              <img class="card-img-top" src="images/projects/eurosat.webp" alt="EuroSAT land-use classification result grid" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Deep Learning Model for Land Use (EuroSAT)</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">Python</span>
+                  <span class="badge badge-primary">CNN</span>
+                  <span class="badge badge-primary">Deep Learning</span>
+                </div>
+                <p class="card-text">Trained and tuned CNNs on EuroSAT satellite imagery; reported accuracy and per-class metrics with visuals.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="https://github.com/rapetisai/Urban-Spatial-Order-Street-Network-Analysis" class="card-link" target="_blank">
+            <div class="card project-card">
+              <img class="card-img-top" src="images/projects/urban-network.webp" alt="Urban street network centrality visualization" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Urban Spatial Order: Street Network Analysis</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">Python</span>
+                  <span class="badge badge-primary">Network Analysis</span>
+                  <span class="badge badge-primary">Geospatial</span>
+                </div>
+                <p class="card-text">Analyzed street-network structure and spatial order with graph metrics to compare connectivity across cities.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="https://github.com/rapetisai/Accelerometer-Based-AlcoholConsumptionDetection" class="card-link" target="_blank">
+            <div class="card project-card">
+              <img class="card-img-top" src="images/projects/accelerometer-detection.webp" alt="Accelerometer signal features for consumption detection" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Accelerometer-Based Alcohol Consumption Detection</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">Python</span>
+                  <span class="badge badge-primary">Signal Processing</span>
+                  <span class="badge badge-primary">Classification</span>
+                </div>
+                <p class="card-text">Engineered motion features from wearable data and trained classifiers to detect consumption events.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="https://github.com/rapetisai/Research-Paper-Summerization" class="card-link" target="_blank">
+            <div class="card project-card">
+              <img class="card-img-top" src="images/projects/paper-summarization.webp" alt="Transformer pipeline for research paper summarization" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Research Paper Summarization</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">NLP</span>
+                  <span class="badge badge-primary">Transformers</span>
+                  <span class="badge badge-primary">Summarization</span>
+                </div>
+                <p class="card-text">Compared transformer architectures (e.g., BERT/T5/PEGASUS) to produce concise abstracts; benchmarked with ROUGE-style scores.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4 mb-4">
           <div class="card project-card">
-            <img class="card-img-top" src="images/projects/spy-lstm.webp" alt="SPY price prediction vs. actuals time series" width="1200" height="675" loading="lazy">
+            <img class="card-img-top" src="images/projects/crypto-market.webp" alt="Interactive crypto dashboard with price, volume, and volatility trends" width="1200" height="675" loading="lazy">
             <div class="card-body">
-              <h5 class="card-title">Forecasting SPY with LSTMs</h5>
+              <h5 class="card-title">Cryptocurrency Market Dynamics — Tableau</h5>
               <div class="tags mb-2">
-                <span class="badge badge-primary">Python</span>
-                <span class="badge badge-primary">LSTM</span>
+                <span class="badge badge-primary">Tableau</span>
+                <span class="badge badge-primary">SQL</span>
                 <span class="badge badge-primary">Time Series</span>
+                <span class="badge badge-primary">Volatility</span>
+                <span class="badge badge-primary">Data Storytelling</span>
               </div>
-              <p class="card-text">Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.</p>
-              <span class="btn btn-link">Read more →</span>
+              <p class="card-text">Interactive dashboard exploring price/volume cycles and volatility regimes across major coins, with filters, annotated timelines, and investor-ready insights.</p>
+              <a href="#" class="btn btn-link" target="_blank">View dashboard →</a>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- EuroSAT -->
-      <div class="col-md-4 mb-4">
-        <a href="https://github.com/rapetisai/Classification_EuroSAT" class="card-link" target="_blank">
-          <div class="card project-card">
-            <img class="card-img-top" src="images/projects/eurosat.webp" alt="EuroSAT land-use classification result grid" width="1200" height="675" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Deep Learning Model for Land Use (EuroSAT)</h5>
-              <div class="tags mb-2">
-                <span class="badge badge-primary">Python</span>
-                <span class="badge badge-primary">CNN</span>
-                <span class="badge badge-primary">Deep Learning</span>
-              </div>
-              <p class="card-text">Trained and tuned CNNs on EuroSAT satellite imagery; reported accuracy and per-class metrics with visuals.</p>
-              <span class="btn btn-link">Read more →</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Urban Network -->
-      <div class="col-md-4 mb-4">
-        <a href="https://github.com/rapetisai/Urban-Spatial-Order-Street-Network-Analysis" class="card-link" target="_blank">
-          <div class="card project-card">
-            <img class="card-img-top" src="images/projects/urban-network.webp" alt="Urban street network centrality visualization" width="1200" height="675" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Urban Spatial Order: Street Network Analysis</h5>
-              <div class="tags mb-2">
-                <span class="badge badge-primary">Python</span>
-                <span class="badge badge-primary">Network Analysis</span>
-                <span class="badge badge-primary">Geospatial</span>
-              </div>
-              <p class="card-text">Analyzed street-network structure and spatial order with graph metrics to compare connectivity across cities.</p>
-              <span class="btn btn-link">Read more →</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Accelerometer Detection -->
-      <div class="col-md-4 mb-4">
-        <a href="https://github.com/rapetisai/Accelerometer-Based-AlcoholConsumptionDetection" class="card-link" target="_blank">
-          <div class="card project-card">
-            <img class="card-img-top" src="images/projects/accelerometer-detection.webp" alt="Accelerometer signal features for consumption detection" width="1200" height="675" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Accelerometer-Based Alcohol Consumption Detection</h5>
-              <div class="tags mb-2">
-                <span class="badge badge-primary">Python</span>
-                <span class="badge badge-primary">Signal Processing</span>
-                <span class="badge badge-primary">Classification</span>
-              </div>
-              <p class="card-text">Engineered motion features from wearable data and trained classifiers to detect consumption events.</p>
-              <span class="btn btn-link">Read more →</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Research Paper Summarization -->
-      <div class="col-md-4 mb-4">
-        <a href="https://github.com/rapetisai/Research-Paper-Summerization" class="card-link" target="_blank">
-          <div class="card project-card">
-            <img class="card-img-top" src="images/projects/paper-summarization.webp" alt="Transformer pipeline for research paper summarization" width="1200" height="675" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Research Paper Summarization</h5>
-              <div class="tags mb-2">
-                <span class="badge badge-primary">NLP</span>
-                <span class="badge badge-primary">Transformers</span>
-                <span class="badge badge-primary">Summarization</span>
-              </div>
-              <p class="card-text">Compared transformer architectures (e.g., BERT/T5/PEGASUS) to produce concise abstracts; benchmarked with ROUGE-style scores.</p>
-              <span class="btn btn-link">Read more →</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Cryptocurrency Market Dynamics (Tableau) -->
-      <div class="col-md-4 mb-4">
-        <div class="card project-card">
-          <img class="card-img-top" src="images/projects/crypto-market.webp" alt="Interactive crypto dashboard with price, volume, and volatility trends" width="1200" height="675" loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title">Cryptocurrency Market Dynamics — Tableau</h5>
-            <div class="tags mb-2">
-              <span class="badge badge-primary">Tableau</span>
-              <span class="badge badge-primary">SQL</span>
-              <span class="badge badge-primary">Time Series</span>
-              <span class="badge badge-primary">Volatility</span>
-              <span class="badge badge-primary">Data Storytelling</span>
-            </div>
-            <p class="card-text">Interactive dashboard exploring price/volume cycles and volatility regimes across major coins, with filters, annotated timelines, and investor-ready insights.</p>
-            <a href="#" class="btn btn-link" target="_blank">View dashboard →</a>
           </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="#" class="card-link" target="_blank"> <div class="card project-card">
+              <img class="card-img-top" src="images/projects/university-chatbot.webp" alt="University AI Chatbot Interface" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">University AI Support Bot</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">LLM</span>
+                  <span class="badge badge-primary">RAG</span>
+                  <span class="badge badge-primary">Multi-Agent</span>
+                </div>
+                <p class="card-text">Developed an intelligent chatbot for Northeastern University to answer queries on curriculum, building locations, and schedules using multi-agent workflows.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="#" class="card-link" target="_blank"> <div class="card project-card">
+              <img class="card-img-top" src="images/projects/boston-sports.webp" alt="Boston Sports Power BI Dashboard" width="1200" height="675" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Boston Sports Performance & ROI</h5>
+                <div class="tags mb-2">
+                  <span class="badge badge-primary">Power BI</span>
+                  <span class="badge badge-primary">Financial Analysis</span>
+                  <span class="badge badge-primary">Sports Analytics</span>
+                </div>
+                <p class="card-text">Interactive dashboard analyzing win rates, playoff conversions, and "Cost Per Win" ROI for the Celtics, Red Sox, and Patriots over the last decade.</p>
+                <span class="btn btn-link">Read more →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- FOOTER -->
   <footer class="footer py-5">
     <div class="container text-center">
       <h3>Get in Touch</h3>
       <div class="custom-btn-group mt-4 d-flex justify-content-center">
-        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/sai-rapeti19/" class="social-button linkedin" target="_blank">
           <img src="images/linkedin_logo.png" alt="LinkedIn" width="50" height="50" />
         </a>
-        <!-- GitHub -->
         <a href="https://github.com/rapetisai" class="social-button github" target="_blank">
           <img src="images/github_logo.png" alt="GitHub" width="50" height="50" />
         </a>
-        <!-- Email -->
         <a href="mailto:rapeti.sa@northeastern.edu" class="social-button email">
           <img src="images/email.jpg" alt="Email" width="50" height="50" />
         </a>
@@ -401,7 +413,6 @@
     </div>
   </footer>
 
-  <!-- JS (same order as the template) -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
