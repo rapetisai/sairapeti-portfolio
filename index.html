@@ -575,7 +575,7 @@
       const elements = document.querySelectorAll('[data-i18n]');
       elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
-        // If translation exists in the selected language, use it. Otherwise fallback to English.
+        // If translation exists in selected language, use it. Otherwise fallback to English.
         if (translations[lang] && translations[lang][key]) {
           el.textContent = translations[lang][key];
         } else if (translations['en'][key]) {
