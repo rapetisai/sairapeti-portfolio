@@ -17,13 +17,12 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* Custom Language Selector Style to match theme */
     .lang-select-container {
       margin-left: 20px;
     }
     #language-selector {
       background: transparent;
-      color: #5b5b5b; /* Matches your theme text color */
+      color: #5b5b5b;
       border: 1px solid #ddd;
       border-radius: 20px;
       padding: 5px 15px;
@@ -31,7 +30,6 @@
       cursor: pointer;
       outline: none;
     }
-    /* Dark mode adjustments for selector */
     body.dark-mode #language-selector {
       color: #f0f0f0;
       border-color: #444;
@@ -93,7 +91,7 @@
         <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
           <div class="about-text">
             <small class="small-text">
-              <span data-i18n="hero_small_1">Data doesn't lie, but it needs a translator.</span> 
+              <span data-i18n="hero_small_1">Data doesn't lie, but it needs a translator.</span>
               <span class="mobile-block" data-i18n="hero_small_2">That's where I come in!</span>
             </small>
 
@@ -139,7 +137,19 @@
         <div class="col-lg-6 col-12">
           <h2 class="mb-4" data-i18n="section_experience">Experiences</h2>
           <div class="accordion" id="experienceAccordion">
-            
+
+            <!-- NEW: Saayam for All -->
+            <div class="timeline-wrapper">
+              <div class="timeline-yr"><span>2026</span></div>
+              <div class="timeline-info">
+                <h3>
+                  <span data-i18n="exp_0_role">Business Analyst, AI</span>
+                  <small> Saayam for All · Remote (Feb 2026 – Present)</small>
+                </h3>
+                <p data-i18n="exp_0_desc">Coordinate project activities and author process maps and flowcharts to document business workflows and surface improvement opportunities. Support system validation by designing test plans, executing test cases, and tracking defects through resolution with developers and stakeholders.</p>
+              </div>
+            </div>
+
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2025</span></div>
               <div class="timeline-info">
@@ -155,7 +165,7 @@
                 <p data-i18n="exp_2_desc">Developed and implemented algorithmic trading strategies to enhance returns and minimize market risks; trained LLMs and curated specialized financial datasets.</p>
               </div>
             </div>
-            
+
             <div class="timeline-wrapper">
               <div class="timeline-yr"><span>2022–2023</span></div>
               <div class="timeline-info">
@@ -171,6 +181,7 @@
                 <p data-i18n="exp_4_desc">Synthesized complex datasets and revealed key patterns using Python &amp; R; produced visualizations with Matplotlib, Seaborn &amp; ggplot2.</p>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -375,7 +386,7 @@
             <div class="card project-card">
               <img class="card-img-top" src="images/Project/boston-sports.jpg" alt="Boston Sports Power BI Dashboard" width="1200" height="675" loading="lazy">
               <div class="card-body">
-                <h5 class="card-title" data-i18n="proj_8_title">Boston Sports Performance & ROI</h5>
+                <h5 class="card-title" data-i18n="proj_8_title">Boston Sports Performance &amp; ROI</h5>
                 <div class="tags mb-2">
                   <span class="badge badge-primary">Power BI</span>
                   <span class="badge badge-primary">Financial Analysis</span>
@@ -432,27 +443,32 @@
         nav_resume: "Resume",
         nav_contact: "Get in Touch",
         dark_mode: "Dark mode",
-        
+
         hero_small_1: "Data doesn't lie, but it needs a translator.",
         hero_small_2: "That's where I come in!",
         hero_intro: "Hey folks, I'm a",
         hero_desc: "Data Analytics Engineering graduate @ Northeastern. I build analytics, ML models, and dashboards across finance, geospatial & urban analytics — turning messy data into crisp, decision-ready insights.",
-        
+
         section_experience: "Experiences",
+        exp_0_role: "Business Analyst, AI",
+        exp_0_desc: "Coordinate project activities and author process maps and flowcharts to document business workflows and surface improvement opportunities. Support system validation by designing test plans, executing test cases, and tracking defects through resolution with developers and stakeholders.",
         exp_1_role: "Graduate Teaching Assistant",
+        exp_1_desc: "Facilitated workshops for 200+ undergraduates on Python, AI, and deep learning, designing hands-on assignments with TensorFlow and PyTorch to strengthen applied ML skills.",
         exp_2_role: "Quantitative Researcher",
+        exp_2_desc: "Developed and implemented algorithmic trading strategies to enhance returns and minimize market risks; trained LLMs and curated specialized financial datasets.",
         exp_3_role: "Junior Data Analyst",
+        exp_3_desc: "Analyzed large datasets in Python to uncover trends; built dashboards & visualizations for communication; used Python/R/SQL/VBA for advanced analysis.",
         exp_4_role: "Data Science Assistant",
-        
+        exp_4_desc: "Synthesized complex datasets and revealed key patterns using Python & R; produced visualizations with Matplotlib, Seaborn & ggplot2.",
+
         section_education: "Education",
         edu_1_degree: "Master of Science in Data Analytics Engineering",
         edu_2_degree: "B.Tech in Computer Science & Engineering",
-        
+
         section_skills: "Skills",
         section_projects: "Projects",
         view_github: "View More Projects on GitHub",
-        
-        // Projects - English (Default)
+
         proj_1_title: "Forecasting SPY with LSTMs",
         proj_1_desc: "Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.",
         proj_2_title: "Deep Learning Model for Land Use (EuroSAT)",
@@ -463,13 +479,13 @@
         proj_4_desc: "Engineered motion features from wearable data and trained classifiers to detect consumption events.",
         proj_5_title: "Research Paper Summarization",
         proj_5_desc: "Compared transformer architectures (e.g., BERT/T5/PEGASUS) to produce concise abstracts; benchmarked with ROUGE-style scores.",
-        proj_6_title: "Cryptocurrency Market Dynamics",
+        proj_6_title: "Cryptocurrency Market Dynamics — Tableau",
         proj_6_desc: "Interactive dashboard exploring price/volume cycles and volatility regimes across major coins, with filters, annotated timelines, and investor-ready insights.",
         proj_7_title: "University AI Support Bot",
         proj_7_desc: "Developed an intelligent chatbot for Northeastern University to answer queries on curriculum, building locations, and schedules using multi-agent workflows.",
         proj_8_title: "Boston Sports Performance & ROI",
         proj_8_desc: "Interactive dashboard analyzing win rates, playoff conversions, and 'Cost Per Win' ROI for the Celtics, Red Sox, and Patriots over the last decade.",
-        
+
         read_more: "Read more →",
         view_dashboard: "View dashboard →",
         footer_contact: "Get in Touch"
@@ -480,30 +496,31 @@
         nav_resume: "రె్యూమ్",
         nav_contact: "సంప్రదించండి",
         dark_mode: "డార్క్ మోడ్",
-        
+
         hero_small_1: "డేటా అబద్ధం చెప్పదు, కానీ దానికి అనువాదకుడు కావాలి.",
         hero_small_2: "అక్కడే నేను వస్తాను!",
         hero_intro: "హలో, నేను ఒక",
         hero_desc: "నార్త్‌ఈస్ట్రన్ యూనివర్శిటీలో డేటా అనలిటిక్స్ గ్రాడ్యుయేట్. నేను ఫైనాన్స్, జియోస్పేషియల్ మరియు అర్బన్ అనలిటిక్స్‌లో మెషిన్ లెర్నింగ్ మోడల్స్ మరియు డాష్‌బోర్డ్‌లను రూపొందిస్తాను.",
-        
+
         section_experience: "అనుభవం",
+        exp_0_role: "Business Analyst, AI",
+        exp_0_desc: "Coordinate project activities and author process maps and flowcharts to document business workflows and surface improvement opportunities. Support system validation by designing test plans, executing test cases, and tracking defects through resolution with developers and stakeholders.",
         exp_1_role: "గ్రాడ్యుయేట్ టీచింగ్ అసిస్టెంట్",
         exp_2_role: "క్వాంటిటేటివ్ రీసెర్చర్",
         exp_3_role: "జూనియర్ డేటా అనలిస్ట్",
         exp_4_role: "డేటా సైన్స్ అసిస్టెంట్",
-        
+
         section_education: "విద్య",
         edu_1_degree: "మాస్టర్ ఆఫ్ సైన్స్ ఇన్ డేటా అనలిటిక్స్",
         edu_2_degree: "బి.టెక్ - కంప్యూటర్ సైన్స్",
-        
+
         section_skills: "నైపుణ్యాలు",
         section_projects: "ప్రాజెక్టులు",
         view_github: "GitHubలో మరిన్ని చూడండి",
 
-        // Add Telugu translations for projects here if needed (defaulting to English for safety)
         proj_1_title: "Forecasting SPY with LSTMs",
         proj_1_desc: "Prepared rolling windows from SPY history, trained an LSTM, and benchmarked hold-out performance with prediction-vs-actual plots.",
-        
+
         read_more: "మరింత చదవండి →",
         view_dashboard: "డాష్‌బోర్డ్ చూడండి →",
         footer_contact: "సంప్రదించండి"
@@ -514,26 +531,28 @@
         nav_resume: "रिज़्यूम",
         nav_contact: "संपर्क करें",
         dark_mode: "डार्क मोड",
-        
+
         hero_small_1: "डेटा झूठ नहीं बोलता, लेकिन उसे अनुवादक की जरूरत होती है।",
         hero_small_2: "वही काम मैं करता हूँ!",
         hero_intro: "नमस्ते दोस्तों, मैं हूँ",
         hero_desc: "नॉर्थईस्टर्न यूनिवर्सिटी में डेटा एनालिटिक्स इंजीनियरिंग ग्रेजुएट। मैं वित्त और शहरी विश्लेषण के लिए एमएल मॉडल और डैशबोर्ड बनाता हूं।",
-        
+
         section_experience: "अनुभव",
+        exp_0_role: "Business Analyst, AI",
+        exp_0_desc: "Coordinate project activities and author process maps and flowcharts to document business workflows and surface improvement opportunities. Support system validation by designing test plans, executing test cases, and tracking defects through resolution with developers and stakeholders.",
         exp_1_role: "ग्रेजुएट टीचिंग असिस्टेंट",
         exp_2_role: "क्वांटिटेटिव रिसर्चर",
         exp_3_role: "जूनियर डेटा एनालिस्ट",
         exp_4_role: "डेटा साइंस असिस्टेंट",
-        
+
         section_education: "शिक्षा",
         edu_1_degree: "डेटा एनालिटिक्स में मास्टर ऑफ साइंस",
         edu_2_degree: "कम्प्यूटर साइंस में बी.टेक",
-        
+
         section_skills: "कौशल (Skills)",
         section_projects: "प्रोजेक्ट्स",
         view_github: "GitHub पर और देखें",
-        
+
         read_more: "और पढ़ें →",
         view_dashboard: "डैशबोर्ड देखें →",
         footer_contact: "संपर्क करें"
@@ -544,26 +563,28 @@
         nav_resume: "Currículum",
         nav_contact: "Contacto",
         dark_mode: "Modo oscuro",
-        
+
         hero_small_1: "Los datos no mienten, pero necesitan un traductor.",
         hero_small_2: "¡Ahí es donde entro yo!",
         hero_intro: "Hola a todos, soy",
         hero_desc: "Graduado en Ingeniería de Análisis de Datos en Northeastern. Creo modelos de ML y tableros en finanzas y análisis geoespacial.",
-        
+
         section_experience: "Experiencia",
+        exp_0_role: "Business Analyst, AI",
+        exp_0_desc: "Coordinate project activities and author process maps and flowcharts to document business workflows and surface improvement opportunities. Support system validation by designing test plans, executing test cases, and tracking defects through resolution with developers and stakeholders.",
         exp_1_role: "Asistente de Docencia",
         exp_2_role: "Investigador Cuantitativo",
         exp_3_role: "Analista de Datos Junior",
         exp_4_role: "Asistente de Ciencia de Datos",
-        
+
         section_education: "Educación",
         edu_1_degree: "Maestría en Análisis de Datos",
         edu_2_degree: "Ingeniería en Ciencias de la Computación",
-        
+
         section_skills: "Habilidades",
         section_projects: "Proyectos",
         view_github: "Ver más en GitHub",
-        
+
         read_more: "Leer más →",
         view_dashboard: "Ver tablero →",
         footer_contact: "Ponte en contacto"
@@ -571,11 +592,9 @@
     };
 
     function changeLanguage(lang) {
-      // 1. Update simple text elements
       const elements = document.querySelectorAll('[data-i18n]');
       elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
-        // If translation exists in selected language, use it. Otherwise fallback to English.
         if (translations[lang] && translations[lang][key]) {
           el.textContent = translations[lang][key];
         } else if (translations['en'][key]) {
